@@ -1,1 +1,38 @@
+###
 GET http://localhost:8080/book
+Accept: application/json
+
+### existing isbn
+GET http://localhost:8080/book/978-3826655487
+Accept: application/json
+
+### non-existing isbn
+GET http://localhost:8080/book/978-3826655488
+Accept: application/json
+
+### invalid isbn
+GET http://localhost:8080/book/978-382
+Accept: application/json
+
+###
+GET http://localhost:8080/book?author=Robert
+Accept: application/json
+
+###
+POST http://localhost:8080/book/search
+Content-Type: application/json
+
+{
+  "title": "some Title",
+  "author": "Gottfried",
+  "more": "alsdfkjsljfd"
+}
+
+###
+GET http://localhost:8080/book/searchwithget?author=Robert&title=some%20Title
+Accept: application/json
+
+
+
+
+
