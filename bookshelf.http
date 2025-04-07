@@ -32,6 +32,17 @@ Content-Type: application/json
 GET http://localhost:8080/book/searchwithget?author=Robert&title=some%20Title
 Accept: application/json
 
+###
+POST http://localhost:8080/book
+Content-Type: application/json
+
+{
+  "isbn": "111-1111111111",
+  "title": "Some Title",
+  "author": "John Doe",
+  "description": "some description"
+}
+
 
 
 

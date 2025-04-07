@@ -35,4 +35,8 @@ public class BookService {
                                 || book.getTitle().contains(searchRequest.title()))
                 .toList();
     }
+
+    Book createBook(Book book) {
+        return bookRepository.saveBook(book);
+    }
 }
