@@ -2,6 +2,8 @@ package de.workshops.bookshelf.book;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.Size;
+import org.slf4j.MDC;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -13,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.mail.internet.MimeMessage;
 import java.util.List;
 
 @RestController
@@ -21,9 +24,16 @@ import java.util.List;
 class BookRestController {
 
     private final BookService bookService;
+    private final MimeMessage mimeMessage;
 
-    BookRestController(BookService bookService) {
+    @Value("${application.title:My Bookshelf}")
+    private String applicationTitle;
+
+    BookRestController(BookService bookService, MimeMessage mimeMessage) {
         this.bookService = bookService;
+        this.mimeMessage = mimeMessage;
+
+        MDC.put("user", "Birgit");
     }
 
     @GetMapping

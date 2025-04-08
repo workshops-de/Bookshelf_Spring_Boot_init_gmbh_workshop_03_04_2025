@@ -1,0 +1,15 @@
+application:
+  title: '@project.name@'
+  version: '@project.version@'
+
+#debug: true
+server:
+  port: 8080
+
+openapi:
+  title: 'Bookshelf API'
+  version: 'v.0.0.1'
+  capacity: 1000
+  license:
+    name: 'MIT License'
+    url: 'https://opensource.org/licenses/MIT'

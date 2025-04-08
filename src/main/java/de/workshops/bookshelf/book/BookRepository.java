@@ -10,14 +10,14 @@ import java.io.IOException;
 import java.util.List;
 
 @Repository
-public class BookRepository {
+class BookRepository {
     private final ObjectMapper mapper;
 
     private final ResourceLoader resourceLoader;
 
     private List<Book> books;
 
-    public BookRepository(ObjectMapper mapper, ResourceLoader resourceLoader) {
+    BookRepository(ObjectMapper mapper, ResourceLoader resourceLoader) {
         this.mapper = mapper;
         this.resourceLoader = resourceLoader;
     }

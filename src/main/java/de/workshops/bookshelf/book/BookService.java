@@ -5,10 +5,10 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class BookService {
+class BookService {
     private final BookRepository bookRepository;
 
-    public BookService(BookRepository bookRepository) {
+    BookService(BookRepository bookRepository) {
         this.bookRepository = bookRepository;
     }
 

@@ -7,10 +7,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequestMapping("/view")
-public class BookViewController {
+class BookViewController {
     private final BookService bookService;
 
-    public BookViewController(BookService bookService) {
+    BookViewController(BookService bookService) {
         this.bookService = bookService;
     }
 
