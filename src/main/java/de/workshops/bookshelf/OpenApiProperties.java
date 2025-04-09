@@ -8,7 +8,7 @@ import java.net.URL;
 public record OpenApiProperties(
         String title,
         String version,
-        Integer capacity,
+        int capacity,
         License license) {
 
     public record License(String name, URL url) {}

@@ -9,7 +9,25 @@ server:
 openapi:
   title: 'Bookshelf API'
   version: 'v.0.0.1'
-  capacity: 1000
+  capacity: 2000
   license:
     name: 'MIT License'
     url: 'https://opensource.org/licenses/MIT'
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/bookshelf
+    username: birgit
+    password: geheim
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+#    generate-ddl: true
+#    defer-datasource-initialization: true
+  h2:
+    console:
+      enabled: true
+  sql:
+    init:
+      mode: always

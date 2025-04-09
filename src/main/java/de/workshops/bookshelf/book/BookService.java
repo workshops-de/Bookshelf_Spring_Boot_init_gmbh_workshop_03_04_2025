@@ -6,9 +6,10 @@ import java.util.List;
 
 @Service
 class BookService {
-    private final BookRepository bookRepository;
+//    private final BookRepository bookRepository;
+    private final BookJdbcRepository bookRepository;
 
-    BookService(BookRepository bookRepository) {
+    BookService(BookJdbcRepository bookRepository) {
         this.bookRepository = bookRepository;
     }
 
