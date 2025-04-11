@@ -1,9 +1,11 @@
 ###
 GET http://localhost:8080/book
+Authorization: Basic birgit geheim
 Accept: application/json
 
 ### existing isbn
 GET http://localhost:8080/book/978-3826655487
+Authorization: Basic birgit geheim
 Accept: application/json
 
 ### non-existing isbn
@@ -34,6 +36,7 @@ Accept: application/json
 
 ###
 POST http://localhost:8080/book
+Authorization: Basic admin admin
 Content-Type: application/json
 
 {
@@ -44,6 +47,14 @@ Content-Type: application/json
 }
 
 
+###
+GET http://localhost:8080/actuator
+Authorization: Basic birgit geheim
+Accept: application/json
 
+###
+GET http://localhost:8080/actuator/beans
+Authorization: Basic birgit geheim
+Accept: application/json
 
 

@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-class BookService {
+public class BookService {
 //    private final BookRepository bookRepository;
     private final BookJdbcRepository bookRepository;
 

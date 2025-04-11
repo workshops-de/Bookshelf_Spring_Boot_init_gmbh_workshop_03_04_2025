@@ -31,3 +31,13 @@ spring:
   sql:
     init:
       mode: always
+#  security:
+#    user:
+#      name: birgit
+#      password: geheim
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'

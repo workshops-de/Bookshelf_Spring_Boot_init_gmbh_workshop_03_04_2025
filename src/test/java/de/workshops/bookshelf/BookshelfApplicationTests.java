@@ -5,7 +5,7 @@ import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabas
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-@AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NON_TEST)
+@AutoConfigureTestDatabase
 class BookshelfApplicationTests {
 
 	@Test

@@ -29,7 +29,7 @@ class EnvironmentTest {
 // you have to start this test with commpand-line option -Dspring.profiles.active=prod
 // or adjust the run-configuration accordingly.
 @SpringBootTest( webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
-@AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NON_TEST)
+@AutoConfigureTestDatabase
 class EnvironmentTest2 {
 
     @Value("${server.port}")
